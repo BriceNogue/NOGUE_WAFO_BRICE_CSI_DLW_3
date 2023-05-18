@@ -1,0 +1,80 @@
+<div class="form-add">
+    <div class="form-header">
+        <h3>Ajouter un abonne</h3>
+    </div>
+    <form #formAbonne="ngForm" *ngIf="abonne" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="">Nom</label>
+            <input type="text" #nom="ngModel" [(ngModel)]="abonne.nom" class="form-control" placeholder="Nom"
+                aria-describedby="helpId">
+        </div>
+        <div class="form-group">
+            <label for="">Prenom</label>
+            <input type="text" #prenom="ngModel" [(ngModel)]="abonne.prenom" class="form-control" placeholder="Prenom"
+                aria-describedby="helpId">
+        </div>
+        <div class="form-group">
+            <label for="">Age</label>
+            <input type="text" #age="ngModel" [(ngModel)]="abonne.age" class="form-control" placeholder="Age"
+                aria-describedby="helpId">
+        </div>
+        <div class="form-group">
+            <label for="">Sexe</label>
+            <select class="form-control-select" #sexe="ngModel" [(ngModel)]="abonne.sexe">
+                <option ngValue="M">Homme</option>
+                <option value="F">Femme</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="">Profession</label>
+            <input type="text" #profession="ngModel" [(ngModel)]="abonne.profession" class="form-control"
+                placeholder="Profession" aria-describedby="helpId">
+        </div>
+        <div class="form-group">
+            <label for="">Rue</label>
+            <input type="text" #rue="ngModel" [(ngModel)]="abonne.rue" class="form-control" placeholder="Rue"
+                aria-describedby="helpId">
+        </div>
+        <div class="form-group">
+            <label for="">Code Postal</label>
+            <input type="text" #code_postal="ngModel" [(ngModel)]="abonne.code_postal" class="form-control"
+                placeholder="Code Postal" aria-describedby="helpId">
+        </div>
+        <div class="form-group">
+            <label for="">Ville</label>
+            <input type="text" #ville="ngModel" [(ngModel)]="abonne.ville" class="form-control" placeholder="Ville"
+                aria-describedby="helpId">
+        </div>
+        <div class="form-group">
+            <label for="">Pays</label>
+            <input type="text" #pays="ngModel" [(ngModel)]="abonne.pays" class="form-control" placeholder="Pays"
+                aria-describedby="helpId">
+        </div>
+        <div class="form-group">
+            <label for="">Telephone</label>
+            <input type="text" #telephone="ngModel" [(ngModel)]="abonne.telephone" class="form-control"
+                placeholder="Telephone" aria-describedby="helpId">
+        </div>
+        <div class="form-group">
+            <label for="">Email</label>
+            <input type="text" #email="ngModel" [(ngModel)]="abonne.email" class="form-control" placeholder="Email"
+                aria-describedby="helpId">
+        </div>
+        <div class="form-group">
+            <label for="">Sexe</label>
+            <select class="form-control-select" #motivation="ngModel" [(ngModel)]="abonne.id_motivation">
+                <option ngValue="1">Motivation 1</option>
+                <option value="2">Motivation 2</option>
+            </select>
+        </div>
+
+        <div class="form-actions">
+            <div>
+                <button class="btn-ok" type="submit">OK</button>
+            </div>
+            <div>
+                <button class="btn-annuler" type="reset">Annuler</button>
+            </div>
+        </div>
+    </form>
+</div>
